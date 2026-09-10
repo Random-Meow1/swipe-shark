@@ -1,0 +1,162 @@
+[gd_scene format=3 uid="uid://d16mx8yt3j2ku"]
+
+[ext_resource type="Script" uid="uid://w2jbbyvkxq83" path="res://scripts/main_menu.gd" id="1_8ln24"]
+[ext_resource type="FontFile" uid="uid://djw38il6yfwct" path="res://fonts/Boxy-Bold.ttf" id="1_l6cm7"]
+[ext_resource type="FontFile" uid="uid://ctrbfnit4g01c" path="res://fonts/FreePixel.ttf" id="3_wu84c"]
+[ext_resource type="FontFile" uid="uid://bqm2chq2kheme" path="res://fonts/8-bit Arcade In.ttf" id="4_wu84c"]
+
+[sub_resource type="InputEventKey" id="InputEventKey_wu84c"]
+device = -1
+keycode = 4194309
+
+[sub_resource type="Shortcut" id="Shortcut_8ln24"]
+events = [SubResource("InputEventKey_wu84c")]
+
+[node name="MainMenu" type="Control" unique_id=1102608272]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8ln24")
+
+[node name="Title" type="Label" parent="." unique_id=1686007984]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -447.5
+offset_top = 248.0
+offset_right = 447.5
+offset_bottom = 364.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_l6cm7")
+theme_override_font_sizes/font_size = 102
+text = "Swipe Shark"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Message" type="Label" parent="." unique_id=505031180]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -447.5
+offset_top = -351.0
+offset_right = 447.5
+offset_bottom = -235.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_wu84c")
+theme_override_font_sizes/font_size = 50
+text = "Message"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=384894710]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.216
+anchor_right = 0.5
+anchor_bottom = 0.80200005
+offset_left = -395.0
+offset_top = 1.0
+offset_right = 397.0
+offset_bottom = 0.9998779
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Play" type="Button" parent="VBoxContainer" unique_id=1542655604]
+custom_minimum_size = Vector2(0, 250)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(0.842635, 3.56168e-06, 4.81307e-07, 1)
+theme_override_colors/font_pressed_color = Color(7.364e-06, 0.778717, 0, 1)
+theme_override_colors/font_hover_color = Color(0.890196, 0.65098, 0, 1)
+theme_override_fonts/font = ExtResource("4_wu84c")
+theme_override_font_sizes/font_size = 128
+shortcut = SubResource("Shortcut_8ln24")
+text = "Play"
+flat = true
+
+[node name="HowTo" type="Button" parent="VBoxContainer" unique_id=1769167697]
+custom_minimum_size = Vector2(0, 250)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(0.842635, 3.56168e-06, 4.81307e-07, 1)
+theme_override_colors/font_pressed_color = Color(7.364e-06, 0.778717, 0, 1)
+theme_override_colors/font_hover_color = Color(0.890196, 0.65098, 0, 1)
+theme_override_fonts/font = ExtResource("4_wu84c")
+theme_override_font_sizes/font_size = 128
+text = "How to play"
+flat = true
+
+[node name="Options" type="Button" parent="VBoxContainer" unique_id=649070340]
+custom_minimum_size = Vector2(0, 250)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(0.842635, 3.56168e-06, 4.81307e-07, 1)
+theme_override_colors/font_pressed_color = Color(7.364e-06, 0.778717, 0, 1)
+theme_override_colors/font_hover_color = Color(0.890196, 0.65098, 0, 1)
+theme_override_fonts/font = ExtResource("4_wu84c")
+theme_override_font_sizes/font_size = 128
+text = "Gameplay"
+flat = true
+
+[node name="MusicSetting" type="CheckButton" parent="VBoxContainer" unique_id=645606453]
+custom_maximum_size = Vector2(-1, 150)
+layout_mode = 2
+size_flags_vertical = 3
+tooltip_text = "Toggle the music."
+theme_override_fonts/font = ExtResource("4_wu84c")
+theme_override_font_sizes/font_size = 64
+button_pressed = true
+text = "Music"
+
+[node name="67Setting" type="CheckButton" parent="VBoxContainer" unique_id=1446741153]
+custom_maximum_size = Vector2(-1, 150)
+layout_mode = 2
+size_flags_vertical = 3
+tooltip_text = "Decide whether 67 death messages can appear. If you turn it off when it was on, the setting will disappear for this session."
+theme_override_fonts/font = ExtResource("4_wu84c")
+theme_override_font_sizes/font_size = 64
+text = "67 Meme"
+
+[node name="FullscreenSetting" type="CheckButton" parent="VBoxContainer" unique_id=1292444990]
+custom_maximum_size = Vector2(-1, 150)
+layout_mode = 2
+size_flags_vertical = 3
+tooltip_text = "Toggle fullscreen/windowed."
+theme_override_fonts/font = ExtResource("4_wu84c")
+theme_override_font_sizes/font_size = 64
+button_pressed = true
+text = "Fullscreen"
+
+[node name="Quit" type="Button" parent="." unique_id=1024021723]
+layout_mode = 0
+offset_right = 529.0
+offset_bottom = 232.0
+tooltip_text = "Quit the game."
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(0.842635, 3.56168e-06, 4.81307e-07, 1)
+theme_override_colors/font_pressed_color = Color(7.364e-06, 0.778717, 0, 1)
+theme_override_colors/font_hover_color = Color(0.890196, 0.65098, 0, 1)
+theme_override_fonts/font = ExtResource("4_wu84c")
+theme_override_font_sizes/font_size = 128
+text = "Quit"
+flat = true
+
+[connection signal="pressed" from="VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="VBoxContainer/HowTo" to="." method="_on_how_to_pressed"]
+[connection signal="pressed" from="VBoxContainer/Options" to="." method="_on_options_pressed"]
+[connection signal="toggled" from="VBoxContainer/MusicSetting" to="." method="_on_music_setting_toggled"]
+[connection signal="toggled" from="VBoxContainer/67Setting" to="." method="_on_sixseven_setting_toggled"]
+[connection signal="toggled" from="VBoxContainer/FullscreenSetting" to="." method="_on_fullscreen_setting_toggled"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]

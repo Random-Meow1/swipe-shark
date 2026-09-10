@@ -1,0 +1,149 @@
+[gd_scene format=3 uid="uid://dber1bid1t6ut"]
+
+[ext_resource type="Script" uid="uid://crun3mpwl8b2g" path="res://scripts/how_to_play.gd" id="1_wq8v7"]
+[ext_resource type="FontFile" uid="uid://bqm2chq2kheme" path="res://fonts/8-bit Arcade In.ttf" id="2_mg0un"]
+[ext_resource type="FontFile" uid="uid://ctrbfnit4g01c" path="res://fonts/FreePixel.ttf" id="4_xkrkv"]
+
+[sub_resource type="Animation" id="Animation_wi5qh"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_xkrkv"]
+resource_name = "reveal"
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_e0xnd"]
+_data = {
+&"RESET": SubResource("Animation_wi5qh"),
+&"reveal": SubResource("Animation_xkrkv")
+}
+
+[node name="HowToPlay" type="Control" unique_id=1482295385]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wq8v7")
+
+[node name="Home" type="Button" parent="." unique_id=1246207640]
+layout_mode = 1
+offset_right = 529.0
+offset_bottom = 232.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(0.842635, 3.56168e-06, 4.81307e-07, 1)
+theme_override_colors/font_pressed_color = Color(7.364e-06, 0.778717, 0, 1)
+theme_override_colors/font_hover_color = Color(0.890196, 0.65098, 0, 1)
+theme_override_fonts/font = ExtResource("2_mg0un")
+theme_override_font_sizes/font_size = 128
+text = "Back"
+flat = true
+
+[node name="Instructions" type="Label" parent="." unique_id=1224942697]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.082
+anchor_top = 0.5
+anchor_right = 0.92
+anchor_bottom = 0.5
+offset_left = 131.536
+offset_top = -453.0
+offset_right = -133.84
+offset_bottom = 454.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("4_xkrkv")
+theme_override_font_sizes/font_size = 45
+text = "Welcome to Swipe Shark! In this game, you play as a shark avoiding rising oil (the black stuff). Jump onto platforms to get higher and higher trying to beat your highscore (which is not saved, so take a screenshot!). The game never ends, so there's no win or lose.
+
+However, you're no ordinary shark. You can eat these orbs called \"powerups\". When you do eat them, you get launched up quickly and travel through platforms for 1 second. This is a speed boost.
+
+To move left and right:
+A and D or Left and Right (keyboard)
+D-Pad or Left Joystick (controller)
+Tap the left and right sides of the screen (mobile)"
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Instructions" unique_id=1780219771]
+libraries/ = SubResource("AnimationLibrary_e0xnd")
+autoplay = &"reveal"
+
+[node name="Credits" type="Label" parent="." unique_id=753642026]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 59.0
+offset_top = -674.0
+offset_right = 350.0
+offset_bottom = -63.0
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 18
+text = "Fonts:
+opengameart.org
+and others
+
+Music:
+Various artists on Pixabay:
+Keyframe_Audio
+geovanebruny
+DIMMYSAD
+Storm_Library
+Amaksi
+
+Game idea:
+Lincoln
+
+Game design:
+Random Meow
+
+Gameplay:
+Random Meow"
+vertical_alignment = 2
+
+[node name="Tutorial" type="Button" parent="." unique_id=451527097]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.47500002
+anchor_top = 1.0
+anchor_right = 0.47500002
+anchor_bottom = 1.0
+offset_left = -264.00006
+offset_top = -379.0
+offset_right = 264.99994
+offset_bottom = -147.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(0.842635, 3.56168e-06, 4.81307e-07, 1)
+theme_override_colors/font_pressed_color = Color(7.364e-06, 0.778717, 0, 1)
+theme_override_colors/font_hover_color = Color(0.890196, 0.65098, 0, 1)
+theme_override_fonts/font = ExtResource("2_mg0un")
+theme_override_font_sizes/font_size = 128
+text = "Tutorial"
+flat = true
+
+[connection signal="pressed" from="Home" to="." method="_on_home_pressed"]
+[connection signal="pressed" from="Tutorial" to="." method="_on_tutorial_pressed"]

@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://f63l1so84ccm"]
+
+[ext_resource type="Texture2D" uid="uid://cnu16r2x7pyy1" path="res://sprites/SoggyGrassPlatform.png" id="1_ba0x2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nlgqw"]
+size = Vector2(24, 6)
+
+[node name="Platform" type="AnimatableBody2D" unique_id=1852969915]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=753027249]
+texture = ExtResource("1_ba0x2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=427296146]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_nlgqw")

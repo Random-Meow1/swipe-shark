@@ -1,0 +1,27 @@
+[gd_scene load_steps=8 format=3 uid="uid://dmwltj1m18ga1"]
+
+[ext_resource type="Script" uid="uid://b14g2fxmw14sm" path="res://scripts/manager.gd" id="1_6rlim"]
+[ext_resource type="AudioStream" uid="uid://wgtrl6h1qts1" path="res://sounds/keyframe_audio-reason-134699.mp3" id="2_6rlim"]
+[ext_resource type="AudioStream" uid="uid://b2802ybwjhp5s" path="res://sounds/geovanebruny-24-dubstep-dub-groove-16311.mp3" id="3_mmyj5"]
+[ext_resource type="AudioStream" uid="uid://clyqen3ps5wm4" path="res://sounds/amaksi-beatboxer-robot-showreel-slideshow-118325.mp3" id="4_unqd7"]
+[ext_resource type="AudioStream" uid="uid://lds5a1uw7thh" path="res://sounds/dimmysad-mankind-vs-machines-action-electronic-dubstep-game-420650.mp3" id="5_x8cda"]
+[ext_resource type="AudioStream" uid="uid://cmumj7oo03vtt" path="res://sounds/storm_library-gaming-music-quotpulse-of-the-arenaquot-by-storm-223349.mp3" id="6_bv183"]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_wokaa"]
+streams_count = 5
+stream_0/stream = ExtResource("2_6rlim")
+stream_1/stream = ExtResource("3_mmyj5")
+stream_2/stream = ExtResource("4_unqd7")
+stream_3/stream = ExtResource("5_x8cda")
+stream_4/stream = ExtResource("6_bv183")
+
+[node name="Global" type="Node"]
+script = ExtResource("1_6rlim")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_wokaa")
+volume_db = -20.0
+autoplay = true
+mix_target = 1
+
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]

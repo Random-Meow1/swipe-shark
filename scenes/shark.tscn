@@ -1,0 +1,82 @@
+[gd_scene load_steps=13 format=3 uid="uid://dqrk6a1vww73c"]
+
+[ext_resource type="Texture2D" uid="uid://b3qptacklnvx1" path="res://sprites/shark.png" id="1_8l5qy"]
+[ext_resource type="Script" uid="uid://b8dh1scubedqq" path="res://scripts/shark.gd" id="1_v5iaq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v5iaq"]
+atlas = ExtResource("1_8l5qy")
+region = Rect2(0, 0, 24, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_po4rd"]
+atlas = ExtResource("1_8l5qy")
+region = Rect2(24, 0, 24, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_inbs7"]
+atlas = ExtResource("1_8l5qy")
+region = Rect2(48, 0, 24, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f40hg"]
+atlas = ExtResource("1_8l5qy")
+region = Rect2(72, 0, 24, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4m6ut"]
+atlas = ExtResource("1_8l5qy")
+region = Rect2(96, 0, 24, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gx357"]
+atlas = ExtResource("1_8l5qy")
+region = Rect2(120, 0, 24, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kbhwa"]
+atlas = ExtResource("1_8l5qy")
+region = Rect2(144, 0, 24, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q38ne"]
+atlas = ExtResource("1_8l5qy")
+region = Rect2(168, 0, 24, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_irb4t"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v5iaq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_po4rd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_inbs7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f40hg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4m6ut")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gx357")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kbhwa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q38ne")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_po4rd"]
+radius = 8.0
+
+[node name="Shark" type="CharacterBody2D"]
+script = ExtResource("1_v5iaq")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_irb4t")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, 0)
+shape = SubResource("CircleShape2D_po4rd")

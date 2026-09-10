@@ -1,0 +1,13 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+android/
+*.cfg
+android-build/
+macos-build/
+windows-build/
+xcode/
+.DS_Store
+.editorconfig
+*.exe
+*.dmg

@@ -1,0 +1,131 @@
+[gd_scene format=3 uid="uid://cnkq4mlglxsho"]
+
+[ext_resource type="Script" uid="uid://btbv0cxhx7vek" path="res://scripts/options.gd" id="1_yjkok"]
+[ext_resource type="FontFile" uid="uid://bqm2chq2kheme" path="res://fonts/8-bit Arcade In.ttf" id="2_kv8mn"]
+
+[node name="Options" type="Control" unique_id=1482295385]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yjkok")
+
+[node name="Home" type="Button" parent="." unique_id=1246207640]
+layout_mode = 1
+offset_right = 529.0
+offset_bottom = 232.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(0.842635, 3.56168e-06, 4.81307e-07, 1)
+theme_override_colors/font_pressed_color = Color(7.364e-06, 0.778717, 0, 1)
+theme_override_colors/font_hover_color = Color(0.890196, 0.65098, 0, 1)
+theme_override_fonts/font = ExtResource("2_kv8mn")
+theme_override_font_sizes/font_size = 128
+text = "Back"
+flat = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=301434786]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.30200002
+anchor_top = 0.18
+anchor_right = 0.698
+anchor_bottom = 0.87900007
+offset_left = -6.1035156e-05
+offset_top = 1.0
+offset_bottom = 0.9998779
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Setting1" type="CheckButton" parent="VBoxContainer" unique_id=2102966771]
+layout_mode = 2
+size_flags_vertical = 3
+tooltip_text = "ON: When input is stopped, so is the shark.
+OFF: The shark continuously moves."
+theme_override_fonts/font = ExtResource("2_kv8mn")
+theme_override_font_sizes/font_size = 64
+button_pressed = true
+text = "Can stop"
+
+[node name="Setting2" type="CheckButton" parent="VBoxContainer" unique_id=455897363]
+layout_mode = 2
+size_flags_vertical = 3
+tooltip_text = "ON: When the shark touches a platform, it jumps automatically.
+OFF: The user needs to go either left or right to jump."
+theme_override_fonts/font = ExtResource("2_kv8mn")
+theme_override_font_sizes/font_size = 64
+button_pressed = true
+text = "Auto jump"
+
+[node name="Setting4" type="CheckButton" parent="VBoxContainer" unique_id=547804850]
+layout_mode = 2
+size_flags_vertical = 3
+tooltip_text = "ON: Powerups show in game.
+OFF: No powerups."
+theme_override_fonts/font = ExtResource("2_kv8mn")
+theme_override_font_sizes/font_size = 64
+button_pressed = true
+text = "Powerups"
+
+[node name="Setting5" type="CheckButton" parent="VBoxContainer" unique_id=231801304]
+layout_mode = 2
+size_flags_vertical = 3
+tooltip_text = "ON: Platform gap is always set to 60.
+OFF: Platform gap can vary from 50 to 70."
+theme_override_fonts/font = ExtResource("2_kv8mn")
+theme_override_font_sizes/font_size = 64
+text = "Fixed platform gap"
+
+[node name="Setting6" type="CheckButton" parent="VBoxContainer" unique_id=1238137093]
+layout_mode = 2
+size_flags_vertical = 3
+tooltip_text = "ON: Oil follows your speed.
+OFF: Oil speed is fixed."
+theme_override_fonts/font = ExtResource("2_kv8mn")
+theme_override_font_sizes/font_size = 64
+button_pressed = true
+text = "Adaptive oil speed"
+
+[node name="Setting7" type="CheckButton" parent="VBoxContainer" unique_id=7575860]
+layout_mode = 2
+size_flags_vertical = 3
+tooltip_text = "ON: There are two platforms per row.
+OFF: There is one platform per row."
+theme_override_fonts/font = ExtResource("2_kv8mn")
+theme_override_font_sizes/font_size = 64
+text = "Two platforms in one"
+
+[node name="Setting8" type="CheckButton" parent="VBoxContainer" unique_id=2070394717]
+layout_mode = 2
+size_flags_vertical = 3
+tooltip_text = "ON: The shark can move through platforms from underneath.
+OFF: Platforms are solid on all sides."
+theme_override_fonts/font = ExtResource("2_kv8mn")
+theme_override_font_sizes/font_size = 64
+text = "Travel through platforms"
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer" unique_id=2127264879]
+layout_mode = 2
+theme_override_constants/separation = 70
+
+[node name="Reset" type="Button" parent="VBoxContainer" unique_id=1189692217]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(0.842635, 3.56168e-06, 4.81307e-07, 1)
+theme_override_colors/font_pressed_color = Color(7.364e-06, 0.778717, 0, 1)
+theme_override_colors/font_hover_color = Color(0.890196, 0.65098, 0, 1)
+theme_override_fonts/font = ExtResource("2_kv8mn")
+theme_override_font_sizes/font_size = 64
+text = "Reset"
+flat = true
+
+[connection signal="pressed" from="Home" to="." method="_on_home_pressed"]
+[connection signal="toggled" from="VBoxContainer/Setting1" to="." method="_on_setting_1_toggled"]
+[connection signal="toggled" from="VBoxContainer/Setting2" to="." method="_on_setting_2_toggled"]
+[connection signal="toggled" from="VBoxContainer/Setting4" to="." method="_on_setting_4_toggled"]
+[connection signal="toggled" from="VBoxContainer/Setting5" to="." method="_on_setting_5_toggled"]
+[connection signal="toggled" from="VBoxContainer/Setting6" to="." method="_on_setting_6_toggled"]
+[connection signal="toggled" from="VBoxContainer/Setting7" to="." method="_on_setting_7_toggled"]
+[connection signal="toggled" from="VBoxContainer/Setting8" to="." method="_on_setting_8_toggled"]
+[connection signal="pressed" from="VBoxContainer/Reset" to="." method="_on_reset_pressed"]

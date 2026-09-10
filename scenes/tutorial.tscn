@@ -1,0 +1,622 @@
+[gd_scene format=3 uid="uid://bxsrxdc1gniao"]
+
+[ext_resource type="Script" uid="uid://d1nkx3l0uxgv8" path="res://scripts/tutorial.gd" id="1_cq4me"]
+[ext_resource type="FontFile" uid="uid://bqm2chq2kheme" path="res://fonts/8-bit Arcade In.ttf" id="2_6yjpi"]
+[ext_resource type="PackedScene" uid="uid://dqrk6a1vww73c" path="res://scenes/shark.tscn" id="3_gbqnl"]
+[ext_resource type="PackedScene" uid="uid://f63l1so84ccm" path="res://scenes/platform.tscn" id="4_ckvwl"]
+[ext_resource type="FontFile" uid="uid://djw38il6yfwct" path="res://fonts/Boxy-Bold.ttf" id="5_6yjpi"]
+[ext_resource type="PackedScene" uid="uid://cy246tw13ar4i" path="res://scenes/powerup.tscn" id="5_gbqnl"]
+[ext_resource type="FontFile" uid="uid://ctrbfnit4g01c" path="res://fonts/FreePixel.ttf" id="6_gbqnl"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_nlqja"]
+distance = 167.0
+
+[node name="Tutorial" type="Node2D" unique_id=950844133]
+script = ExtResource("1_cq4me")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=255874598]
+layer = 10
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=901046299]
+anchors_preset = -1
+anchor_right = 0.098000005
+anchor_bottom = 0.102000006
+offset_left = 196.0
+offset_top = 205.0
+offset_right = 1040.0
+offset_bottom = 86.999985
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_6yjpi")
+theme_override_font_sizes/font_size = 128
+text = "Tutorial"
+metadata/_edit_use_anchors_ = true
+
+[node name="Back" type="Button" parent="CanvasLayer" unique_id=206624791]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -804.0
+offset_bottom = 497.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(0.842635, 3.56168e-06, 4.81307e-07, 1)
+theme_override_colors/font_pressed_color = Color(7.364e-06, 0.778717, 0, 1)
+theme_override_colors/font_hover_color = Color(0.890196, 0.65098, 0, 1)
+theme_override_fonts/font = ExtResource("2_6yjpi")
+theme_override_font_sizes/font_size = 128
+text = "Back"
+flat = true
+
+[node name="Shark" parent="." unique_id=491067058 instance=ExtResource("3_gbqnl")]
+z_index = 5
+
+[node name="Camera2D" type="Camera2D" parent="Shark" unique_id=2038366899]
+ignore_rotation = false
+zoom = Vector2(4, 4)
+position_smoothing_enabled = true
+
+[node name="PresetPlatforms" type="Node" parent="." unique_id=630658419]
+
+[node name="Platform" parent="PresetPlatforms" unique_id=2106696621 instance=ExtResource("4_ckvwl")]
+position = Vector2(0, 25)
+
+[node name="Platform4" parent="PresetPlatforms" unique_id=627415049 instance=ExtResource("4_ckvwl")]
+position = Vector2(24, 25)
+
+[node name="Platform5" parent="PresetPlatforms" unique_id=2024767399 instance=ExtResource("4_ckvwl")]
+position = Vector2(48, 25)
+
+[node name="Platform10" parent="PresetPlatforms" unique_id=1426835579 instance=ExtResource("4_ckvwl")]
+position = Vector2(72, 25)
+
+[node name="Platform11" parent="PresetPlatforms" unique_id=1700243011 instance=ExtResource("4_ckvwl")]
+position = Vector2(96, 25)
+
+[node name="Platform2" parent="PresetPlatforms" unique_id=668100098 instance=ExtResource("4_ckvwl")]
+position = Vector2(216, 25)
+
+[node name="Platform111" parent="PresetPlatforms" unique_id=888168546 instance=ExtResource("4_ckvwl")]
+position = Vector2(240, 25)
+
+[node name="Platform112" parent="PresetPlatforms" unique_id=115427687 instance=ExtResource("4_ckvwl")]
+position = Vector2(264, 25)
+
+[node name="Platform113" parent="PresetPlatforms" unique_id=1808826045 instance=ExtResource("4_ckvwl")]
+position = Vector2(288, 25)
+
+[node name="Platform118" parent="PresetPlatforms" unique_id=1167080319 instance=ExtResource("4_ckvwl")]
+position = Vector2(312, 25)
+
+[node name="Platform119" parent="PresetPlatforms" unique_id=400213601 instance=ExtResource("4_ckvwl")]
+position = Vector2(120, 25)
+
+[node name="Platform120" parent="PresetPlatforms" unique_id=971727751 instance=ExtResource("4_ckvwl")]
+position = Vector2(144, 25)
+
+[node name="Platform129" parent="PresetPlatforms" unique_id=1150598824 instance=ExtResource("4_ckvwl")]
+position = Vector2(192, 25)
+
+[node name="Platform130" parent="PresetPlatforms" unique_id=1208657440 instance=ExtResource("4_ckvwl")]
+position = Vector2(168, 25)
+
+[node name="Platform3" parent="PresetPlatforms" unique_id=828297739 instance=ExtResource("4_ckvwl")]
+position = Vector2(-216, 25)
+
+[node name="Platform131" parent="PresetPlatforms" unique_id=1885444756 instance=ExtResource("4_ckvwl")]
+position = Vector2(-192, 25)
+
+[node name="Platform132" parent="PresetPlatforms" unique_id=1657954898 instance=ExtResource("4_ckvwl")]
+position = Vector2(-168, 25)
+
+[node name="Platform133" parent="PresetPlatforms" unique_id=2060875334 instance=ExtResource("4_ckvwl")]
+position = Vector2(-144, 25)
+
+[node name="Platform134" parent="PresetPlatforms" unique_id=879438566 instance=ExtResource("4_ckvwl")]
+position = Vector2(-120, 25)
+
+[node name="Platform135" parent="PresetPlatforms" unique_id=1158179759 instance=ExtResource("4_ckvwl")]
+position = Vector2(-312, 25)
+
+[node name="Platform136" parent="PresetPlatforms" unique_id=443358052 instance=ExtResource("4_ckvwl")]
+position = Vector2(-288, 25)
+
+[node name="Platform137" parent="PresetPlatforms" unique_id=1414139267 instance=ExtResource("4_ckvwl")]
+position = Vector2(-240, 25)
+
+[node name="Platform138" parent="PresetPlatforms" unique_id=2142628587 instance=ExtResource("4_ckvwl")]
+position = Vector2(-264, 25)
+
+[node name="Platform12" parent="PresetPlatforms" unique_id=1508223624 instance=ExtResource("4_ckvwl")]
+position = Vector2(-96, 25)
+
+[node name="Platform13" parent="PresetPlatforms" unique_id=1763510665 instance=ExtResource("4_ckvwl")]
+position = Vector2(-72, 25)
+
+[node name="Platform6" parent="PresetPlatforms" unique_id=1212530038 instance=ExtResource("4_ckvwl")]
+position = Vector2(-24, 25)
+
+[node name="Platform7" parent="PresetPlatforms" unique_id=43297381 instance=ExtResource("4_ckvwl")]
+position = Vector2(-48, 25)
+
+[node name="Platform8" parent="PresetPlatforms" unique_id=393591808 instance=ExtResource("4_ckvwl")]
+position = Vector2(37, -32)
+
+[node name="Platform9" parent="PresetPlatforms" unique_id=38658247 instance=ExtResource("4_ckvwl")]
+position = Vector2(-37, -32)
+
+[node name="Platform14" parent="PresetPlatforms" unique_id=334528132 instance=ExtResource("4_ckvwl")]
+position = Vector2(-113, -70)
+
+[node name="Platform15" parent="PresetPlatforms" unique_id=296474628 instance=ExtResource("4_ckvwl")]
+position = Vector2(-182, -116)
+
+[node name="Platform16" parent="PresetPlatforms" unique_id=1647917036 instance=ExtResource("4_ckvwl")]
+position = Vector2(-97, -167)
+
+[node name="Platform17" parent="PresetPlatforms" unique_id=166440011 instance=ExtResource("4_ckvwl")]
+position = Vector2(1, -207)
+
+[node name="Platform96" parent="PresetPlatforms" unique_id=1756128514 instance=ExtResource("4_ckvwl")]
+position = Vector2(25, -167)
+
+[node name="Platform97" parent="PresetPlatforms" unique_id=228199208 instance=ExtResource("4_ckvwl")]
+position = Vector2(49, -167)
+
+[node name="Platform98" parent="PresetPlatforms" unique_id=1944969519 instance=ExtResource("4_ckvwl")]
+position = Vector2(73, -167)
+
+[node name="Platform99" parent="PresetPlatforms" unique_id=47254252 instance=ExtResource("4_ckvwl")]
+position = Vector2(97, -167)
+
+[node name="Platform100" parent="PresetPlatforms" unique_id=504601766 instance=ExtResource("4_ckvwl")]
+position = Vector2(121, -167)
+
+[node name="Platform105" parent="PresetPlatforms" unique_id=1733915213 instance=ExtResource("4_ckvwl")]
+position = Vector2(-206, -116)
+
+[node name="Platform18" parent="PresetPlatforms" unique_id=622043180 instance=ExtResource("4_ckvwl")]
+position = Vector2(1, -281)
+
+[node name="Platform19" parent="PresetPlatforms" unique_id=755147044 instance=ExtResource("4_ckvwl")]
+position = Vector2(1, -419)
+
+[node name="Platform21" parent="PresetPlatforms" unique_id=776439637 instance=ExtResource("4_ckvwl")]
+position = Vector2(-24, -419)
+
+[node name="Platform22" parent="PresetPlatforms" unique_id=1225211484 instance=ExtResource("4_ckvwl")]
+position = Vector2(-49, -419)
+
+[node name="Platform23" parent="PresetPlatforms" unique_id=703331493 instance=ExtResource("4_ckvwl")]
+position = Vector2(-74, -419)
+
+[node name="Platform24" parent="PresetPlatforms" unique_id=1728314705 instance=ExtResource("4_ckvwl")]
+position = Vector2(1, -565)
+
+[node name="Platform25" parent="PresetPlatforms" unique_id=415586036 instance=ExtResource("4_ckvwl")]
+position = Vector2(-24, -565)
+
+[node name="Platform26" parent="PresetPlatforms" unique_id=211096210 instance=ExtResource("4_ckvwl")]
+position = Vector2(-49, -565)
+
+[node name="Platform27" parent="PresetPlatforms" unique_id=422786003 instance=ExtResource("4_ckvwl")]
+position = Vector2(-74, -565)
+
+[node name="Platform28" parent="PresetPlatforms" unique_id=1920592013 instance=ExtResource("4_ckvwl")]
+position = Vector2(-99, -565)
+
+[node name="Platform29" parent="PresetPlatforms" unique_id=422186678 instance=ExtResource("4_ckvwl")]
+position = Vector2(-124, -565)
+
+[node name="Platform30" parent="PresetPlatforms" unique_id=25512594 instance=ExtResource("4_ckvwl")]
+position = Vector2(-149, -565)
+
+[node name="Platform31" parent="PresetPlatforms" unique_id=1303706013 instance=ExtResource("4_ckvwl")]
+position = Vector2(-174, -565)
+
+[node name="Platform32" parent="PresetPlatforms" unique_id=1126167718 instance=ExtResource("4_ckvwl")]
+position = Vector2(101, -565)
+
+[node name="Platform33" parent="PresetPlatforms" unique_id=1811829575 instance=ExtResource("4_ckvwl")]
+position = Vector2(76, -565)
+
+[node name="Platform34" parent="PresetPlatforms" unique_id=1028752439 instance=ExtResource("4_ckvwl")]
+position = Vector2(51, -565)
+
+[node name="Platform35" parent="PresetPlatforms" unique_id=1305592207 instance=ExtResource("4_ckvwl")]
+position = Vector2(26, -565)
+
+[node name="Platform36" parent="PresetPlatforms" unique_id=1201831322 instance=ExtResource("4_ckvwl")]
+position = Vector2(1, -626)
+
+[node name="Platform37" parent="PresetPlatforms" unique_id=285534958 instance=ExtResource("4_ckvwl")]
+position = Vector2(-24, -626)
+
+[node name="Platform38" parent="PresetPlatforms" unique_id=1638095700 instance=ExtResource("4_ckvwl")]
+position = Vector2(-49, -626)
+
+[node name="Platform39" parent="PresetPlatforms" unique_id=280283402 instance=ExtResource("4_ckvwl")]
+position = Vector2(-74, -626)
+
+[node name="Platform40" parent="PresetPlatforms" unique_id=16373733 instance=ExtResource("4_ckvwl")]
+position = Vector2(-99, -626)
+
+[node name="Platform41" parent="PresetPlatforms" unique_id=1693103416 instance=ExtResource("4_ckvwl")]
+position = Vector2(-124, -626)
+
+[node name="Platform42" parent="PresetPlatforms" unique_id=1691311338 instance=ExtResource("4_ckvwl")]
+position = Vector2(-149, -626)
+
+[node name="Platform43" parent="PresetPlatforms" unique_id=1055275452 instance=ExtResource("4_ckvwl")]
+position = Vector2(-174, -626)
+
+[node name="Platform44" parent="PresetPlatforms" unique_id=763724274 instance=ExtResource("4_ckvwl")]
+position = Vector2(101, -626)
+
+[node name="Platform45" parent="PresetPlatforms" unique_id=1770821196 instance=ExtResource("4_ckvwl")]
+position = Vector2(76, -626)
+
+[node name="Platform46" parent="PresetPlatforms" unique_id=1966036007 instance=ExtResource("4_ckvwl")]
+position = Vector2(51, -626)
+
+[node name="Platform47" parent="PresetPlatforms" unique_id=1856801738 instance=ExtResource("4_ckvwl")]
+position = Vector2(26, -626)
+
+[node name="Platform48" parent="PresetPlatforms" unique_id=688997299 instance=ExtResource("4_ckvwl")]
+position = Vector2(1, -686)
+
+[node name="Platform49" parent="PresetPlatforms" unique_id=1879856392 instance=ExtResource("4_ckvwl")]
+position = Vector2(-24, -686)
+
+[node name="Platform50" parent="PresetPlatforms" unique_id=1152689882 instance=ExtResource("4_ckvwl")]
+position = Vector2(-49, -686)
+
+[node name="Platform51" parent="PresetPlatforms" unique_id=1537469018 instance=ExtResource("4_ckvwl")]
+position = Vector2(-74, -686)
+
+[node name="Platform52" parent="PresetPlatforms" unique_id=1709825555 instance=ExtResource("4_ckvwl")]
+position = Vector2(-99, -686)
+
+[node name="Platform53" parent="PresetPlatforms" unique_id=550380185 instance=ExtResource("4_ckvwl")]
+position = Vector2(-124, -686)
+
+[node name="Platform54" parent="PresetPlatforms" unique_id=1473792718 instance=ExtResource("4_ckvwl")]
+position = Vector2(-149, -686)
+
+[node name="Platform55" parent="PresetPlatforms" unique_id=1896944528 instance=ExtResource("4_ckvwl")]
+position = Vector2(-174, -686)
+
+[node name="Platform56" parent="PresetPlatforms" unique_id=1735845116 instance=ExtResource("4_ckvwl")]
+position = Vector2(101, -686)
+
+[node name="Platform57" parent="PresetPlatforms" unique_id=2010349160 instance=ExtResource("4_ckvwl")]
+position = Vector2(76, -686)
+
+[node name="Platform58" parent="PresetPlatforms" unique_id=375271041 instance=ExtResource("4_ckvwl")]
+position = Vector2(51, -686)
+
+[node name="Platform59" parent="PresetPlatforms" unique_id=335416636 instance=ExtResource("4_ckvwl")]
+position = Vector2(26, -686)
+
+[node name="Platform60" parent="PresetPlatforms" unique_id=1594794399 instance=ExtResource("4_ckvwl")]
+position = Vector2(0, -766)
+
+[node name="Platform61" parent="PresetPlatforms" unique_id=574908464 instance=ExtResource("4_ckvwl")]
+position = Vector2(-25, -766)
+
+[node name="Platform62" parent="PresetPlatforms" unique_id=1299265726 instance=ExtResource("4_ckvwl")]
+position = Vector2(-50, -766)
+
+[node name="Platform63" parent="PresetPlatforms" unique_id=895788949 instance=ExtResource("4_ckvwl")]
+position = Vector2(-75, -766)
+
+[node name="Platform64" parent="PresetPlatforms" unique_id=293064730 instance=ExtResource("4_ckvwl")]
+position = Vector2(-100, -766)
+
+[node name="Platform65" parent="PresetPlatforms" unique_id=1017923355 instance=ExtResource("4_ckvwl")]
+position = Vector2(-125, -766)
+
+[node name="Platform66" parent="PresetPlatforms" unique_id=1685176402 instance=ExtResource("4_ckvwl")]
+position = Vector2(-150, -766)
+
+[node name="Platform67" parent="PresetPlatforms" unique_id=56811654 instance=ExtResource("4_ckvwl")]
+position = Vector2(-175, -766)
+
+[node name="Platform68" parent="PresetPlatforms" unique_id=1436803260 instance=ExtResource("4_ckvwl")]
+position = Vector2(100, -766)
+
+[node name="Platform69" parent="PresetPlatforms" unique_id=1778139895 instance=ExtResource("4_ckvwl")]
+position = Vector2(75, -766)
+
+[node name="Platform70" parent="PresetPlatforms" unique_id=1394230192 instance=ExtResource("4_ckvwl")]
+position = Vector2(50, -766)
+
+[node name="Platform71" parent="PresetPlatforms" unique_id=1236090636 instance=ExtResource("4_ckvwl")]
+position = Vector2(25, -766)
+
+[node name="Platform72" parent="PresetPlatforms" unique_id=2129159742 instance=ExtResource("4_ckvwl")]
+position = Vector2(0, -862)
+
+[node name="Platform73" parent="PresetPlatforms" unique_id=1610167238 instance=ExtResource("4_ckvwl")]
+position = Vector2(-25, -862)
+
+[node name="Platform74" parent="PresetPlatforms" unique_id=282403186 instance=ExtResource("4_ckvwl")]
+position = Vector2(-50, -862)
+
+[node name="Platform75" parent="PresetPlatforms" unique_id=1077969158 instance=ExtResource("4_ckvwl")]
+position = Vector2(-75, -862)
+
+[node name="Platform76" parent="PresetPlatforms" unique_id=221673654 instance=ExtResource("4_ckvwl")]
+position = Vector2(-100, -862)
+
+[node name="Platform77" parent="PresetPlatforms" unique_id=1732671946 instance=ExtResource("4_ckvwl")]
+position = Vector2(-125, -862)
+
+[node name="Platform78" parent="PresetPlatforms" unique_id=1310883966 instance=ExtResource("4_ckvwl")]
+position = Vector2(-150, -862)
+
+[node name="Platform79" parent="PresetPlatforms" unique_id=550519061 instance=ExtResource("4_ckvwl")]
+position = Vector2(-175, -862)
+
+[node name="Platform80" parent="PresetPlatforms" unique_id=1588851869 instance=ExtResource("4_ckvwl")]
+position = Vector2(100, -862)
+
+[node name="Platform81" parent="PresetPlatforms" unique_id=605424615 instance=ExtResource("4_ckvwl")]
+position = Vector2(75, -862)
+
+[node name="Platform82" parent="PresetPlatforms" unique_id=1245322628 instance=ExtResource("4_ckvwl")]
+position = Vector2(50, -862)
+
+[node name="Platform83" parent="PresetPlatforms" unique_id=1938491718 instance=ExtResource("4_ckvwl")]
+position = Vector2(25, -862)
+
+[node name="Platform84" parent="PresetPlatforms" unique_id=1124424882 instance=ExtResource("4_ckvwl")]
+position = Vector2(0, -921)
+
+[node name="Platform85" parent="PresetPlatforms" unique_id=347761861 instance=ExtResource("4_ckvwl")]
+position = Vector2(-25, -921)
+
+[node name="Platform86" parent="PresetPlatforms" unique_id=506662427 instance=ExtResource("4_ckvwl")]
+position = Vector2(-50, -921)
+
+[node name="Platform87" parent="PresetPlatforms" unique_id=71324990 instance=ExtResource("4_ckvwl")]
+position = Vector2(-75, -921)
+
+[node name="Platform88" parent="PresetPlatforms" unique_id=464992121 instance=ExtResource("4_ckvwl")]
+position = Vector2(-100, -921)
+
+[node name="Platform89" parent="PresetPlatforms" unique_id=2078377861 instance=ExtResource("4_ckvwl")]
+position = Vector2(-125, -921)
+
+[node name="Platform90" parent="PresetPlatforms" unique_id=1124901820 instance=ExtResource("4_ckvwl")]
+position = Vector2(-150, -921)
+
+[node name="Platform91" parent="PresetPlatforms" unique_id=1723759794 instance=ExtResource("4_ckvwl")]
+position = Vector2(-175, -921)
+
+[node name="Platform92" parent="PresetPlatforms" unique_id=1081469987 instance=ExtResource("4_ckvwl")]
+position = Vector2(100, -921)
+
+[node name="Platform93" parent="PresetPlatforms" unique_id=1199077712 instance=ExtResource("4_ckvwl")]
+position = Vector2(75, -921)
+
+[node name="Platform94" parent="PresetPlatforms" unique_id=961441968 instance=ExtResource("4_ckvwl")]
+position = Vector2(50, -921)
+
+[node name="Platform95" parent="PresetPlatforms" unique_id=122569585 instance=ExtResource("4_ckvwl")]
+position = Vector2(25, -921)
+
+[node name="Platform101" parent="PresetPlatforms" unique_id=1381547415 instance=ExtResource("4_ckvwl")]
+position = Vector2(0, -978)
+
+[node name="Platform102" parent="PresetPlatforms" unique_id=1562827692 instance=ExtResource("4_ckvwl")]
+position = Vector2(-25, -978)
+
+[node name="Platform103" parent="PresetPlatforms" unique_id=1998601203 instance=ExtResource("4_ckvwl")]
+position = Vector2(-50, -978)
+
+[node name="Platform104" parent="PresetPlatforms" unique_id=1095673771 instance=ExtResource("4_ckvwl")]
+position = Vector2(-75, -978)
+
+[node name="Platform106" parent="PresetPlatforms" unique_id=1963229275 instance=ExtResource("4_ckvwl")]
+position = Vector2(-100, -978)
+
+[node name="Platform107" parent="PresetPlatforms" unique_id=1449369771 instance=ExtResource("4_ckvwl")]
+position = Vector2(-125, -978)
+
+[node name="Platform108" parent="PresetPlatforms" unique_id=925858146 instance=ExtResource("4_ckvwl")]
+position = Vector2(-150, -978)
+
+[node name="Platform109" parent="PresetPlatforms" unique_id=1083372228 instance=ExtResource("4_ckvwl")]
+position = Vector2(-175, -978)
+
+[node name="Platform110" parent="PresetPlatforms" unique_id=813254367 instance=ExtResource("4_ckvwl")]
+position = Vector2(100, -978)
+
+[node name="Platform114" parent="PresetPlatforms" unique_id=81232947 instance=ExtResource("4_ckvwl")]
+position = Vector2(0, -1036)
+
+[node name="Platform115" parent="PresetPlatforms" unique_id=1747107202 instance=ExtResource("4_ckvwl")]
+position = Vector2(-25, -1036)
+
+[node name="Platform116" parent="PresetPlatforms" unique_id=1652558280 instance=ExtResource("4_ckvwl")]
+position = Vector2(-50, -1036)
+
+[node name="Platform117" parent="PresetPlatforms" unique_id=1845969623 instance=ExtResource("4_ckvwl")]
+position = Vector2(-75, -1036)
+
+[node name="Platform121" parent="PresetPlatforms" unique_id=581406361 instance=ExtResource("4_ckvwl")]
+position = Vector2(-175, -1036)
+
+[node name="Platform126" parent="PresetPlatforms" unique_id=1308837306 instance=ExtResource("4_ckvwl")]
+position = Vector2(-41, -1116)
+
+[node name="Platform127" parent="PresetPlatforms" unique_id=742564779 instance=ExtResource("4_ckvwl")]
+position = Vector2(11, -1083)
+
+[node name="Platform128" parent="PresetPlatforms" unique_id=1925917496 instance=ExtResource("4_ckvwl")]
+position = Vector2(-92, -1083)
+
+[node name="Platform122" parent="PresetPlatforms" unique_id=1222504520 instance=ExtResource("4_ckvwl")]
+position = Vector2(100, -1036)
+
+[node name="Platform123" parent="PresetPlatforms" unique_id=1679050313 instance=ExtResource("4_ckvwl")]
+position = Vector2(75, -1036)
+
+[node name="Platform124" parent="PresetPlatforms" unique_id=484335539 instance=ExtResource("4_ckvwl")]
+position = Vector2(50, -1036)
+
+[node name="Platform125" parent="PresetPlatforms" unique_id=707255193 instance=ExtResource("4_ckvwl")]
+position = Vector2(25, -1036)
+
+[node name="Platform20" parent="PresetPlatforms" unique_id=360599123 instance=ExtResource("4_ckvwl")]
+position = Vector2(1, -355)
+
+[node name="Powerup" parent="PresetPlatforms" unique_id=542150724 instance=ExtResource("5_gbqnl")]
+position = Vector2(-32, -449)
+
+[node name="Label" type="Label" parent="." unique_id=1820915102]
+anchors_preset = -1
+offset_left = -73.0
+offset_top = -106.0
+offset_right = 74.0
+offset_bottom = -89.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_6yjpi")
+theme_override_font_sizes/font_size = 8
+text = "Welcome to Swipe Shark!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="." unique_id=1510918281]
+anchors_preset = -1
+offset_left = -218.0
+offset_top = -63.0
+offset_right = -71.0
+offset_bottom = -30.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("6_gbqnl")
+theme_override_font_sizes/font_size = 16
+text = "Try climbing here!"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Label5" type="Label" parent="." unique_id=940253834]
+anchors_preset = -1
+offset_left = -139.0
+offset_top = -342.0
+offset_right = 8.0
+offset_bottom = -288.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("6_gbqnl")
+theme_override_font_sizes/font_size = 16
+text = "Move around the platform to go higher."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Label9" type="Label" parent="." unique_id=1180818121]
+anchors_preset = -1
+offset_left = -105.0
+offset_top = -516.0
+offset_right = 42.0
+offset_bottom = -462.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("6_gbqnl")
+theme_override_font_sizes/font_size = 16
+text = "This is a powerup. It gives you a boost."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Label11" type="Label" parent="." unique_id=2018159999]
+anchors_preset = -1
+offset_left = -184.0
+offset_top = -1034.0
+offset_right = 113.0
+offset_bottom = -980.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("6_gbqnl")
+theme_override_font_sizes/font_size = 16
+text = "During gameplay, there is rising oil that you have to avoid, so hurry!"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Label12" type="Label" parent="." unique_id=71534676]
+anchors_preset = -1
+offset_left = -182.0
+offset_top = -1185.0
+offset_right = 115.0
+offset_bottom = -1131.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("6_gbqnl")
+theme_override_font_sizes/font_size = 16
+text = "That's it! Try playing now!"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Label6" type="Label" parent="." unique_id=1410141816]
+anchors_preset = -1
+offset_left = 6.0
+offset_top = -225.0
+offset_right = 37.0
+offset_bottom = -197.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -0.83265793
+theme_override_fonts/font = ExtResource("6_gbqnl")
+theme_override_font_sizes/font_size = 16
+text = ">"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Label7" type="Label" parent="." unique_id=1726466893]
+anchors_preset = -1
+offset_left = 28.999998
+offset_top = -241.99998
+offset_right = 60.0
+offset_bottom = -213.99998
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -1.5867748
+theme_override_fonts/font = ExtResource("6_gbqnl")
+theme_override_font_sizes/font_size = 16
+text = ">"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Label8" type="Label" parent="." unique_id=2038617127]
+anchors_preset = -1
+offset_left = 31.00001
+offset_top = -273.0
+offset_right = 62.00001
+offset_bottom = -245.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -2.272423
+theme_override_fonts/font = ExtResource("6_gbqnl")
+theme_override_font_sizes/font_size = 16
+text = ">"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1900965219]
+position = Vector2(0, 200)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2117810628]
+shape = SubResource("WorldBoundaryShape2D_nlqja")
+
+[connection signal="pressed" from="CanvasLayer/Back" to="." method="_on_back_pressed"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

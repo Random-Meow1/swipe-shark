@@ -1,0 +1,184 @@
+[gd_scene format=3 uid="uid://bsle7ug3477hy"]
+
+[ext_resource type="Script" uid="uid://b6adrn5jowhhr" path="res://scripts/game.gd" id="1_lbhrr"]
+[ext_resource type="PackedScene" uid="uid://dqrk6a1vww73c" path="res://scenes/shark.tscn" id="1_uwrxv"]
+[ext_resource type="FontFile" uid="uid://bqm2chq2kheme" path="res://fonts/8-bit Arcade In.ttf" id="2_iywne"]
+[ext_resource type="PackedScene" uid="uid://f63l1so84ccm" path="res://scenes/platform.tscn" id="2_yqjtg"]
+[ext_resource type="PackedScene" uid="uid://bcrww2qnd8hhx" path="res://scenes/killzone.tscn" id="3_lnu2h"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_lbhrr"]
+
+[node name="Game" type="Node2D" unique_id=1383797590]
+script = ExtResource("1_lbhrr")
+
+[node name="Shark" parent="." unique_id=869332488 instance=ExtResource("1_uwrxv")]
+z_index = 5
+
+[node name="Camera2D" type="Camera2D" parent="Shark" unique_id=1994824378]
+ignore_rotation = false
+zoom = Vector2(5, 5)
+limit_left = 0
+limit_right = 0
+position_smoothing_enabled = true
+
+[node name="PresetPlatforms" type="Node" parent="." unique_id=2145753770]
+
+[node name="Platform" parent="PresetPlatforms" unique_id=1912174377 instance=ExtResource("2_yqjtg")]
+position = Vector2(0, 25)
+
+[node name="Platform4" parent="PresetPlatforms" unique_id=433668897 instance=ExtResource("2_yqjtg")]
+position = Vector2(24, 25)
+
+[node name="Platform5" parent="PresetPlatforms" unique_id=1974320614 instance=ExtResource("2_yqjtg")]
+position = Vector2(48, 25)
+
+[node name="Platform10" parent="PresetPlatforms" unique_id=838863250 instance=ExtResource("2_yqjtg")]
+position = Vector2(72, 25)
+
+[node name="Platform11" parent="PresetPlatforms" unique_id=63502027 instance=ExtResource("2_yqjtg")]
+position = Vector2(96, 25)
+
+[node name="Platform" parent="PresetPlatforms/Platform11" unique_id=1092150663 instance=ExtResource("2_yqjtg")]
+position = Vector2(120, 0)
+
+[node name="Platform4" parent="PresetPlatforms/Platform11" unique_id=984612541 instance=ExtResource("2_yqjtg")]
+position = Vector2(144, 0)
+
+[node name="Platform5" parent="PresetPlatforms/Platform11" unique_id=1604840638 instance=ExtResource("2_yqjtg")]
+position = Vector2(168, 0)
+
+[node name="Platform10" parent="PresetPlatforms/Platform11" unique_id=1547282403 instance=ExtResource("2_yqjtg")]
+position = Vector2(192, 0)
+
+[node name="Platform11" parent="PresetPlatforms/Platform11" unique_id=1711830734 instance=ExtResource("2_yqjtg")]
+position = Vector2(216, 0)
+
+[node name="Platform12" parent="PresetPlatforms/Platform11" unique_id=292008738 instance=ExtResource("2_yqjtg")]
+position = Vector2(24, 0)
+
+[node name="Platform13" parent="PresetPlatforms/Platform11" unique_id=570959298 instance=ExtResource("2_yqjtg")]
+position = Vector2(48, 0)
+
+[node name="Platform6" parent="PresetPlatforms/Platform11" unique_id=1954981726 instance=ExtResource("2_yqjtg")]
+position = Vector2(96, 0)
+
+[node name="Platform7" parent="PresetPlatforms/Platform11" unique_id=92325202 instance=ExtResource("2_yqjtg")]
+position = Vector2(72, 0)
+
+[node name="Platform" parent="PresetPlatforms/Platform11/Platform7" unique_id=1546113064 instance=ExtResource("2_yqjtg")]
+position = Vector2(-384, 0)
+
+[node name="Platform4" parent="PresetPlatforms/Platform11/Platform7" unique_id=1285803042 instance=ExtResource("2_yqjtg")]
+position = Vector2(-360, 0)
+
+[node name="Platform5" parent="PresetPlatforms/Platform11/Platform7" unique_id=1812801517 instance=ExtResource("2_yqjtg")]
+position = Vector2(-336, 0)
+
+[node name="Platform10" parent="PresetPlatforms/Platform11/Platform7" unique_id=421173306 instance=ExtResource("2_yqjtg")]
+position = Vector2(-312, 0)
+
+[node name="Platform11" parent="PresetPlatforms/Platform11/Platform7" unique_id=1394672188 instance=ExtResource("2_yqjtg")]
+position = Vector2(-288, 0)
+
+[node name="Platform12" parent="PresetPlatforms/Platform11/Platform7" unique_id=1239703168 instance=ExtResource("2_yqjtg")]
+position = Vector2(-480, 0)
+
+[node name="Platform13" parent="PresetPlatforms/Platform11/Platform7" unique_id=1673650036 instance=ExtResource("2_yqjtg")]
+position = Vector2(-456, 0)
+
+[node name="Platform6" parent="PresetPlatforms/Platform11/Platform7" unique_id=1725260401 instance=ExtResource("2_yqjtg")]
+position = Vector2(-408, 0)
+
+[node name="Platform7" parent="PresetPlatforms/Platform11/Platform7" unique_id=1621670208 instance=ExtResource("2_yqjtg")]
+position = Vector2(-432, 0)
+
+[node name="Platform12" parent="PresetPlatforms" unique_id=49606361 instance=ExtResource("2_yqjtg")]
+position = Vector2(-96, 25)
+
+[node name="Platform13" parent="PresetPlatforms" unique_id=724302106 instance=ExtResource("2_yqjtg")]
+position = Vector2(-72, 25)
+
+[node name="Platform6" parent="PresetPlatforms" unique_id=733842921 instance=ExtResource("2_yqjtg")]
+position = Vector2(-24, 25)
+
+[node name="Platform7" parent="PresetPlatforms" unique_id=157396589 instance=ExtResource("2_yqjtg")]
+position = Vector2(-48, 25)
+
+[node name="Platform8" parent="PresetPlatforms" unique_id=1697956914 instance=ExtResource("2_yqjtg")]
+position = Vector2(37, -32)
+
+[node name="Platform9" parent="PresetPlatforms" unique_id=86480831 instance=ExtResource("2_yqjtg")]
+position = Vector2(-37, -32)
+
+[node name="Oil" parent="." unique_id=1705041892 instance=ExtResource("3_lnu2h")]
+position = Vector2(0, 200)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Oil" unique_id=2078393628]
+shape = SubResource("WorldBoundaryShape2D_lbhrr")
+
+[node name="ColorRect" type="ColorRect" parent="Oil" unique_id=1071229559]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -1645.0
+offset_right = 1645.0
+offset_bottom = 1852.0
+grow_horizontal = 2
+color = Color(0, 0, 0, 1)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=142193238]
+layer = 10
+
+[node name="Score" type="Label" parent="CanvasLayer" unique_id=999526940]
+anchors_preset = -1
+anchor_right = 0.098000005
+offset_left = 197.0
+offset_right = 838.0
+offset_bottom = 488.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_iywne")
+theme_override_font_sizes/font_size = 128
+text = "Score"
+vertical_alignment = 1
+
+[node name="PauseMenu" type="Node" parent="CanvasLayer" unique_id=104368247]
+process_mode = 3
+
+[node name="Pause" type="Button" parent="CanvasLayer/PauseMenu" unique_id=1635798922]
+process_mode = 3
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -707.0
+offset_bottom = 472.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(0.842635, 3.56168e-06, 4.81307e-07, 1)
+theme_override_colors/font_pressed_color = Color(7.364e-06, 0.778717, 0, 1)
+theme_override_colors/font_hover_color = Color(0.890196, 0.65098, 0, 1)
+theme_override_fonts/font = ExtResource("2_iywne")
+theme_override_font_sizes/font_size = 128
+text = "Pause"
+flat = true
+
+[node name="Quit" type="Button" parent="CanvasLayer/PauseMenu" unique_id=676826923]
+process_mode = 3
+visible = false
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -677.0
+offset_top = 418.0
+offset_bottom = 696.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(0.842635, 3.56168e-06, 4.81307e-07, 1)
+theme_override_colors/font_pressed_color = Color(7.364e-06, 0.778717, 0, 1)
+theme_override_colors/font_hover_color = Color(0.890196, 0.65098, 0, 1)
+theme_override_fonts/font = ExtResource("2_iywne")
+theme_override_font_sizes/font_size = 128
+text = "Quit"
+flat = true
+
+[connection signal="pressed" from="CanvasLayer/PauseMenu/Pause" to="." method="_on_pause_pressed"]
+[connection signal="pressed" from="CanvasLayer/PauseMenu/Quit" to="." method="_on_quit_pressed"]
